@@ -16,6 +16,8 @@
     "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
   "latex-workshop.latex.recipe.default": "lualatex",
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.bibtex-format.align-equal.enabled": true,
   "latex-workshop.latex.recipes": [
     {
       "name": "lualatex",

@@ -6,3 +6,4 @@
 - collection-langjapanese
 - collection-latexextra
 - latexmk
+- latexindent
