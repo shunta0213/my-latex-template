@@ -4,7 +4,6 @@
     "context": "..",
     "dockerfile": "../docker/Dockerfile"
   },
-  "runArgs": [],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,5 +16,6 @@
       ]
     }
   },
+  "postCreateCommand": "chmod +x .devcontainer/postCreate.sh && .devcontainer/postCreate.sh",
   "remoteUser": "root"
 }

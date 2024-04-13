@@ -9,7 +9,7 @@ RUN apt update && apt upgrade \
     git \
     locales \
     # pyenv requirements
-    build-essential libssl-dev zlib1g-dev ibbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+    build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
 RUN git clone https://github.com/anyenv/anyenv ~/.anyenv \
     && echo 'eval "$(anyenv init -)"' >> ~/.bashrc \
@@ -21,15 +21,16 @@ RUN git clone https://github.com/anyenv/anyenv ~/.anyenv \
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen \
     && locale-gen
 
-ARG NODE_VERSION=20.9.0
+RUN mkdir -p /usr/local/ssl/certs \
+    && ln -s /etc/ssl/certs /usr/local/ssl/certs
 
-RUN anyenv install nodenv \
-    && exec $SHELL -l \
-    && nodenv install ${NODE_VERSION} \
-    && nodenv local ${NODE_VERSION}
+RUN anyenv install nodenv
+RUN anyenv install pyenv
 
-RUN anyenv install pyenv \
-    && exec $SHELL -l
+# RUN cpan -i App::cpanminus \
+#     && cpanm YAML::Tiny
+
 
 RUN tlmgr install \
-    latexindent
+    latexindent \
+    luacode
