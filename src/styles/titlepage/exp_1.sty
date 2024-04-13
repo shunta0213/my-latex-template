@@ -1,9 +1,38 @@
+\usepackage{luacode}
+
 \newcommand{\teacher}[1]{\def\theteacher{#1}}
 \newcommand{\experimentNumber}[1]{\def\theexperimentNumber{#1}}
 \newcommand{\dayGroup}[1]{\def\thedayGroup{#1}}
 \newcommand{\experimentDate}[1]{\def\theexperimentDate{#1}}
 \newcommand{\experimentSession}[1]{\def\theexperimentSession{#1}}
 \newcommand{\submissionDate}[1]{\def\thesubmissionDate{#1}}
+
+
+% read univ, dept, major from environment variable
+\begin{luacode*}
+function univ()
+    if os.getenv("UNIV") == nil then
+        tex.print(" ")
+    else
+        tex.print(os.getenv("UNIV"))
+    end
+end
+function dept()
+    if os.getenv("DEPT") == nil then
+        tex.print(" ")
+    else
+        tex.print(os.getenv("DEPT"))
+    end
+end
+function major()
+    if os.getenv("MAJOR") == nil then
+        tex.print("")
+    else
+        tex.print(os.getenv("MAJOR"))
+    end
+end
+\end{luacode*}
+
 
 \makeatletter
 \renewcommand{\maketitle}{
@@ -28,7 +57,12 @@
         \vspace{1.5cm}
 
         \vfill
-        \large{大学名\\学部名\\学科名}
+        \directlua{univ()}
+        \vspace{0.5cm}
+        \directlua{dept()}
+        \vspace{0.5cm}
+        \directlua{major()}
+
     \end{titlepage}
 }
 \makeatother

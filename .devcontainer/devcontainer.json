@@ -12,7 +12,8 @@
         "ms-vscode-remote.remote-containers",
         "yzhang.markdown-all-in-one",
         "esbenp.prettier-vscode",
-        "taichi.vscode-textlint"
+        "taichi.vscode-textlint",
+        "GitHub.copilot"
       ]
     }
   },

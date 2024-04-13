@@ -1,0 +1,15 @@
+\ProvidesPackage{titlepage}
+
+\RequirePackage{keyval}
+\RequirePackage{etoolbox}
+
+\def\@type{exp}
+
+\define@key{titlepage}{type}[exp]{\def\@type{#1}}
+
+\ifstrequal{type}{exp}{
+    \usepackage{./exp_1}
+}{}
+
+
+\ProcessOptions\relax
