@@ -33,4 +33,6 @@ RUN anyenv install pyenv
 
 RUN tlmgr install \
     latexindent \
-    luacode
+    luacode \
+    luatexja \
+    geometry
