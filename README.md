@@ -1,9 +1,8 @@
 # My LaTeX Project Templates
 
-## Installed TeX Live Packages
+Use with Visual Studio Code, Dev Container
 
-- collection-fontsrecommended
-- collection-langjapanese
-- collection-latexextra
-- latexmk
-- latexindent
+Features
+- lualatex
+- some pre-defined sections
+- pre-commit hook to format, lint, etc.
