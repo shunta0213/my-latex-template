@@ -15,7 +15,7 @@ repos:
         name: textlint
         language: node
         entry: npm run textlint
-        files: '^src\/.*\.tex$'
+        files: '^.*\.(sty|tex)?$'
 
   # TODO: apply once cpan SSL connection error
   # - repo: https://github.com/cmhughes/latexindent.pl.git
