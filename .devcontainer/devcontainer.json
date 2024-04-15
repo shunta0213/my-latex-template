@@ -13,7 +13,8 @@
         "yzhang.markdown-all-in-one",
         "esbenp.prettier-vscode",
         "taichi.vscode-textlint",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "christian-kohler.path-intellisense"
       ]
     }
   },

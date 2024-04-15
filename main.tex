@@ -1,6 +1,8 @@
 \documentclass{jlreq}
 
 \usepackage{src/styles/root}
+
+% titlepage
 \usepackage{src/styles/titlepage/exp_1}
 
 \title{My {\LaTeX} Template}
@@ -17,12 +19,13 @@
 \submissionDate{\today}
 
 % Add University, Department, Major in environment variable if you want to use
-
 \begin{document}
 
 \maketitle
 
-\subfile{src/sections/intro}
+
+\subfile{src/sections/intro/intro}
+\subfile{src/sections/method/method}
 
 
 \end{document}

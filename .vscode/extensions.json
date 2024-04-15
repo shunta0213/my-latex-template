@@ -3,6 +3,7 @@
     "james-yu.latex-workshop",
     "ms-azuretools.vscode-docker",
     "ms-vscode-remote.remote-containers",
-    "taichi.vscode-textlint"
+    "taichi.vscode-textlint",
+    "christian-kohler.path-intellisense"
   ]
 }

@@ -9,30 +9,6 @@
 
 
 % read univ, dept, major from environment variable
-\begin{luacode*}
-function univ()
-    if os.getenv("UNIV") == nil then
-        tex.print(" ")
-    else
-        tex.print(os.getenv("UNIV"))
-    end
-end
-function dept()
-    if os.getenv("DEPT") == nil then
-        tex.print(" ")
-    else
-        tex.print(os.getenv("DEPT"))
-    end
-end
-function major()
-    if os.getenv("MAJOR") == nil then
-        tex.print("")
-    else
-        tex.print(os.getenv("MAJOR"))
-    end
-end
-\end{luacode*}
-
 
 \makeatletter
 \renewcommand{\maketitle}{
@@ -57,11 +33,12 @@ end
         \vspace{1.5cm}
 
         \vfill
-        \directlua{univ()}
+        % TODO: fix
+        \directlua{tex.sprint(os.getenv("UNIV"))}
         \vspace{0.5cm}
-        \directlua{dept()}
+        \directlua{tex.sprint(os.getenv("DEPT"))}
         \vspace{0.5cm}
-        \directlua{major()}
+        \directlua{tex.sprint(os.getenv("MAJOR"))}
 
     \end{titlepage}
 }
