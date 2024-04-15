@@ -1,6 +1,5 @@
 FROM paperist/texlive-ja:latest
 
-
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/root/.anyenv/bin:$PATH"
 
@@ -27,8 +26,8 @@ RUN mkdir -p /usr/local/ssl/certs \
 RUN anyenv install nodenv
 RUN anyenv install pyenv
 
-# RUN cpan -i App::cpanminus \
-#     && cpanm YAML::Tiny
+RUN cpan -i App::cpanminus \
+    && cpanm YAML::Tiny
 
 
 RUN tlmgr install \
