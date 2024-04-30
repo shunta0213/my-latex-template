@@ -17,6 +17,9 @@ clean:
 .PHONY: prod
 prod:
 	@echo "Building production version..."
+	@grep -q '\\usepackage{src/styles/draft}' main.tex && \
+		echo "\033[31mWARNING: The document is using the draft style package.\033[0m" || \
+		echo "No draft style package found."
 	@latexmk -pdf -silent -outdir=./build
 	@latexmk -c -outdir=./build
 ifneq ($(NAME),)
