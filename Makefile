@@ -22,5 +22,5 @@ prod:
 		echo "No draft style package found."
 	@latexmk -pdf -silent -outdir=./build
 ifneq ($(NAME),)
-	@mv ./build/*.pdf ./build/$(NAME).pdf
+	@mv ./build/main.pdf ./build/$(NAME).pdf
 endif
