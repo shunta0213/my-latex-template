@@ -11,6 +11,10 @@ venv
 # os
 .DS_Store
 
+# latexindent
+indent.log
+*.bak*
+
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

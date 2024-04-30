@@ -21,7 +21,6 @@ prod:
 		echo "\033[31mWARNING: The document is using the draft style package.\033[0m" || \
 		echo "No draft style package found."
 	@latexmk -pdf -silent -outdir=./build
-	@latexmk -c -outdir=./build
 ifneq ($(NAME),)
 	@mv ./build/*.pdf ./build/$(NAME).pdf
 endif

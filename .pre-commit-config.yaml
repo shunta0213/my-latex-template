@@ -23,3 +23,11 @@ repos:
       - id: latexindent
         name: latexindent
         files: '^src/.*\.tex$'
+
+  - repo: local
+    hooks:
+      - id: latexmk
+        name: latexmk
+        entry: make prod
+        language: system
+        files: '^src/.*\.tex$'
