@@ -11,11 +11,12 @@
   "files.insertFinalNewline": true,
   // TeX Configs
   "[tex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
   "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
+  "latex-workshop.formatting.latex": "latexindent",
   "latex-workshop.latex.recipe.default": "lualatex",
   "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.bibtex-format.align-equal.enabled": true,
